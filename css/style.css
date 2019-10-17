@@ -158,13 +158,13 @@ p {
     padding: 0 10px;
   }
   h1 {
-    font-size: 15px;
+    font-size: 10px;
   }
   h1::after {
     height: 6px;
   }
   p {
-    font-size: 18px;
+    font-size: 7px;
   }
   .btn {
     font-size: 16px;
