@@ -3,7 +3,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
+b, u, i, center,  
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
@@ -69,6 +69,41 @@ body {
   overflow: hidden;
 }
 
+@import @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+
+p {/*padding: 0 260*/
+  border-right: solid 3px rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Source Code Pro', monospace;  
+  font-size: 24px;
+  color: rgba(255,255,255,.70);
+  margin: 0 auto;
+}
+
+
+/* Animation */
+p {
+  animation: animated-text 4s steps(29) 1s 1 normal both,
+             animated-cursor 600ms steps(29) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 795px;}
+
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(0,255,0,.75);}
+  to{border-right-color: transparent;}
+}
+
 #intro {
   position: absolute;
   left: 0;
@@ -84,6 +119,9 @@ h2 {
   color: #ffffff;
   letter-spacing: 0.05em;
 }
+
+
+
 h1::after {
   content: '';
   width: 80px;
@@ -93,11 +131,12 @@ h1::after {
   margin: 30px auto;
   line-height: 1.1;
 }
+/*
 p {
   margin: 0 0 30px 0;
   font-size: 24px;
   font-family: 'Roboto', sans-serif;
-}
+}*/
 
 @media only screen and (max-width: 1000px) {
   h1 {
