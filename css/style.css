@@ -139,6 +139,10 @@ p {
   font-family: 'Roboto', sans-serif;
 }*/
 
+@-ms-viewport{
+  width: device-width;
+}
+
 @media only screen and (max-width: 1000px) {
   h1 {
     font-size: 15px;
