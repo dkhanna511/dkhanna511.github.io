@@ -148,7 +148,7 @@ p {
   width: device-width;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1000px) {
   h1 {
     font-size: 15px;
   }
@@ -163,7 +163,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 500px) {
   #intro {
     padding: 0 5px;
   }
