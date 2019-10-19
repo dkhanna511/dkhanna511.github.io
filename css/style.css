@@ -78,9 +78,10 @@ p {/*padding: 0 260*/
   white-space: nowrap;
   overflow: hidden;    
   font-family: 'Source Code Pro', monospace;  
-  font-size: 24px;
+  font-size: 20px;
   color: rgba(255,255,255,.70);
   margin: 0 auto;
+  overflow: hidden;
 }
 
 
@@ -88,13 +89,16 @@ p {/*padding: 0 260*/
 p {
   animation: animated-text 4s steps(29) 1s 1 normal both,
              animated-cursor 600ms steps(29) infinite;
+             margin: 0 auto;
+             overflow: hidden;
 }
 
 /* text animation */
 
 @keyframes animated-text{
   from{width: 0;}
-  to{width: 795px;}
+  to{width: 645px;}
+
 
 }
 
@@ -103,6 +107,7 @@ p {
 @keyframes animated-cursor{
   from{border-right-color: rgba(0,255,0,.75);}
   to{border-right-color: transparent;}
+
 }
 
 #intro {
@@ -143,13 +148,13 @@ p {
   width: device-width;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 500px) {
   h1 {
     font-size: 15px;
   }
 }
 
-@media only screen and (max-width: 100px) {
+@media only screen and (max-width: 500px) {
   h1 {
     font-size: 15px;
   }
@@ -158,7 +163,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 100px) {
+@media only screen and (max-width: 1500px) {
   #intro {
     padding: 0 5px;
   }
@@ -170,13 +175,14 @@ p {
   }
   p {
     font-size: 5px;
-  }
+
+}
   .btn {
     font-size: 5px;
   }
 }
 
-@media only screen and (max-width: 100px) {
+@media only screen and (max-width: 500px) {
   h1 {
     font-size: 5px;
   }
