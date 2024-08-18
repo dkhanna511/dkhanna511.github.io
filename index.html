@@ -66,7 +66,7 @@
         <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
         <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+        <!-- <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li> -->
         <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
             <li><a href="#">Dropdown 1</a></li>
@@ -111,11 +111,17 @@
       <div class="container section-title" data-aos="fade-up">
         <h2>About</h2>
         <p class="fst-italic py-3">
-          Hi! Welcome to my webpage. I'm Dheeraj, a graduate student pursuing MASc SYDE under Prof. John Zelek. I'm working in the Vision and Image Processing  Lab ( VIP LAb) on the detection and tracking of moving parts in the automation industry and detecting faults in them. Before coming to the University of Waterloo, I enjoyed my time working at a startup called LENS Corporation where I mostly worked on the deployment of Deep Learning methods for fingerprint matching.
-
-          I have 2 years of work experience in the field of Deep Learning, Computer Vision, and a bit of Robotics, especially in Autonomous Vehicles where my work was focused on sensor fusion and calibration. I like the idea of combining AI and Robotics and creating real-world applications. 
+          Hi! <br><br>
           
-          I regularly update anything new that happens in my life and my website also consists of a few projects and experiences that I have had.
+          Welcome to my webpage. I'm Dheeraj, a graduate student pursuing MASc SYDE under Prof. John Zelek. 
+          I'm working in the Vision and Image Processing  Lab ( VIP LAb) on the detection and tracking of moving parts
+          in the automation industry and detecting faults in them. Before coming to the University of Waterloo, I enjoyed my 
+          time working at a startup called LENS Corporation where I mostly worked on the deployment of Deep Learning methods for fingerprint matching. <br><br>
+
+          I have 2 years of work experience in the field of Deep Learning, Computer Vision, and a bit of Robotics, 
+          especially in Autonomous Vehicles where my work was focused on sensor fusion and calibration. I like the idea of combining AI and Robotics and creating real-world applications. <br><br>
+          
+          I regularly update anything new that happens in my life and my website also consists of a few projects and experiences that I have had.<br><br>
           
           Thanks!  
         </p>
@@ -286,68 +292,78 @@
       <div class="container">
 
         <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Sumary</h3>
-
-            <div class="resume-item pb-0">
-              <h4>Brandon Johnson</h4>
-              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
-              <ul>
-                <li>Portland par 127,Orlando, FL</li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Master of Applied Science (MASc) in Systems Design Engineering</h4>
-              <h5>2015 - 2016</h5>
-              <p><em>University of Waterloo, Waterloo, Ontario</em></p>
-              <p>I'm a research student focusing on Multiple Object Tracking for my thesis</p>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Bachelor of Technology in Electronics and Communication</h4>
-              <h5>2010 - 2014</h5>
-              <p><em>Guru Gobind Singh Indrprastha University, India</em></p>
-              <p>I majored in Embedded Systems, Microcontrollers and Microprocessors</p>
-            </div><!-- Edn Resume Item -->
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
             <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Graduate Student Researcher | VIP Lab | University of Waterloo</h4>
-              <h5>September 2022 - Present</h5>
-              <p><em>Waterloo, Ontario</em></p>
-              <ul>
-                <li>Benchmarked multiple object tracking datasets with different state-of-the-art techniques including Transformers, Diffusion models, Graph
-                  Neural Networks, Mamba, and motion models such as Kalman Filters</li>
-                <li>Created a novel automatic bounding box annotation pipeline to annotate any video with multiple objects of the same class or multiple
-                  classes with 10 FPS speed using Point Tracking (PIPs, TAPIR), Segment Anything (SAM), and Yolo-V8 </li>
-                <li>Developed proprietary algorithms to calculate the velocities of assembly parts in a bowl feeder mechanism, enhancing production yield
-                  and reducing manual intervention time which resulted in the client filing a patent for the methodology.</li>
-                <!-- <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li> -->
-              </ul>
-            </div><!-- Edn Resume Item -->
+        
+            <!-- VIP Lab experience -->
+            <div class="resume-item d-flex justify-content-between align-items-center">
+              <div>
+                <h4>Graduate Student Researcher | VIP Lab | University of Waterloo</h4>
+                <h5>September 2022 - Present</h5>
+                <p><em>Waterloo, Ontario</em></p>
+                <ul>
+                  <li>Benchmarked multiple object tracking datasets with different state-of-the-art techniques...</li>
+                  <li>Created a novel automatic bounding box annotation pipeline to annotate any video...</li>
+                  <li>Developed proprietary algorithms to calculate the velocities of assembly parts...</li>
+                </ul>
+              </div>
+              <div>
+                <img src="assets/img/University_of_Waterloo_seal.svg.png" alt="University of Waterloo Logo" class="img-fluid" style="max-width: 200px; margin-right: 50px;">
+                <img src="assets/img/viplogo-1.png" alt="VIP Lab Logo" class="img-fluid" style="max-width: 230px;">
+                
+              </div>
+            </div><!-- End Resume Item -->
+        
+            <!-- LENS Corporation experience -->
+            <div class="resume-item d-flex justify-content-between align-items-center">
+              <div>
+                <h4>Computer Vision Research Engineer</h4>
+                <h5>February 2022 - May 2022</h5>
+                <p><em>LENS Corporation, India</em></p>
+                <ul>
+                  <li>Corrected and evaluated programs for fingerprint matching algorithms in C++.</li>
+                  <li>Programmed a C++ pipeline with OpenCV and Torchscript for deploying a deep learning model.</li>
+                </ul>
+              </div>
+              <div>
+                <img src="assets/img/LENS.jpeg" alt="LENS Corporation Logo" class="img-fluid" style="max-width: 250px;">
+              </div>
+            </div><!-- End Resume Item -->
+        
+            <!-- IIIT Delhi experience -->
+            <div class="resume-item d-flex justify-content-between align-items-center">
+              <div>
+                <h4>Perception Research Engineer</h4>
+                <h5>February 2022 - May 2022</h5>
+                <p><em>Autonomous Vehicle Project | IIIT Delhi, India</em></p>
+                <ul>
+                  <li>Designed and deployed a robust system for calibrating 2 front-facing cameras and a LiDAR.</li>
+                  <li>Benchmarked and optimized lane detection and tracking algorithms using Torchscript and C++.</li>
+                </ul>
+              </div>
+              <div>
+                <img src="assets/img/IIIT-Delhi.jpg" alt="IIIT Delhi Logo" class="img-fluid" style="max-width: 250px;">
+              </div>
+            </div><!-- End Resume Item -->
 
-            <div class="resume-item">
-              <h4>Graphic design specialist</h4>
-              <h5>2017 - 2018</h5>
-              <p><em>Stepping Stone Advertising, New York, NY</em></p>
-              <ul>
-                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
 
+            <!-- Microsoft Research Experience -->
+            <div class="resume-item d-flex justify-content-between align-items-center">
+              <div>
+                <h4>Research Intern</h4>
+                <h5>February 2022 - May 2022</h5>
+                <p><em>Microsoft Research India</em></p>
+                <ul>
+                  <li>Led the deployment of the Automated Driver License Testing (ALT) project at the Institute of Driving Training and Research (IDTR) in Bihar.</li>
+                  <li>Implemented algorithms to refactor and scale the project for various Regional Transport Offices (RTO) across India. The scaling led to the
+                    deployment of the project in 10+ cities in India with 99% accuracy in driving license results.</li>
+                </ul>
+              </div>
+              <div>
+                <img src="assets/img/microsoft_research_logo.jpg" alt="IIIT Delhi Logo" class="img-fluid" style="max-width: 250px;">
+              </div>
+            </div><!-- End Resume Item -->
           </div>
-
         </div>
 
       </div>
@@ -598,13 +614,13 @@
     </section> -->
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section light-background">
+    <!-- <section id="testimonials" class="testimonials section light-background">
 
-      <!-- Section Title -->
+
       <div class="container section-title" data-aos="fade-up">
         <h2>Testimonials</h2>
         <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -647,7 +663,7 @@
                 <h3>Saul Goodman</h3>
                 <h4>Ceo &amp; Founder</h4>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
             <div class="swiper-slide">
               <div class="testimonial-item">
@@ -660,7 +676,7 @@
                 <h3>Sara Wilsson</h3>
                 <h4>Designer</h4>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
             <div class="swiper-slide">
               <div class="testimonial-item">
@@ -673,7 +689,7 @@
                 <h3>Jena Karlis</h3>
                 <h4>Store Owner</h4>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
             <div class="swiper-slide">
               <div class="testimonial-item">
@@ -686,7 +702,7 @@
                 <h3>Matt Brandon</h3>
                 <h4>Freelancer</h4>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
             <div class="swiper-slide">
               <div class="testimonial-item">
@@ -699,7 +715,7 @@
                 <h3>John Larson</h3>
                 <h4>Entrepreneur</h4>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
           </div>
           <div class="swiper-pagination"></div>
@@ -707,7 +723,7 @@
 
       </div>
 
-    </section><!-- /Testimonials Section -->
+    </section> -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
@@ -797,22 +813,22 @@
 
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
+  <!-- <footer id="footer" class="footer position-relative light-background"> -->
 
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
+    <!-- <div class="container"> -->
+      <!-- <div class="copyright text-center "> -->
+        <!-- <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p> -->
+      <!-- </div> -->
+      <!-- <div class="credits"> -->
+        <!-- All the links in the footer should remain intact. --> -->
         <!-- You can delete the links only if you've purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
+        <!-- <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+      <!-- </div> -->
+    <!-- </div> -->
 
-  </footer>
+  <!-- </footer> -->
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
