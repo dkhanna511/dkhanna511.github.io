@@ -1209,6 +1209,323 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
+/* Eyantra details section */
+
+
+.eyantra-details .eyantra-details-slider img {
+  width: 100%;
+}
+
+.eyantra-details .eyantra-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.eyantra-details .eyantra-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  opacity: 1;
+}
+
+.eyantra-details .eyantra-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+}
+
+.eyantra-details .eyantra-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.eyantra-details .eyantra-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.eyantra-details .eyantra-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.eyantra-details .eyantra-info ul li+li {
+  margin-top: 10px;
+}
+
+.eyantra-details .eyantra-description {
+  padding-top: 30px;
+}
+
+.eyantra-details .eyantra-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.eyantra-details .eyantra-description p {
+  padding: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+
+/*  E-Yantra details section END  */
+
+
+/* recipedb details section */
+
+
+.recipedb-details .recipedb-details-slider img {
+  width: 100%;
+}
+
+.recipedb-details .recipedb-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.recipedb-details .recipedb-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  opacity: 1;
+}
+
+.recipedb-details .recipedb-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+}
+
+.recipedb-details .recipedb-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.recipedb-details .recipedb-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.recipedb-details .recipedb-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.recipedb-details .recipedb-info ul li+li {
+  margin-top: 10px;
+}
+
+.recipedb-details .recipedb-description {
+  padding-top: 30px;
+}
+
+.recipedb-details .recipedb-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.recipedb-details .recipedb-description p {
+  padding: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+
+/* Recipe DB Section Ends */
+
+
+/* popcat  of Videos and Images section STARTS */
+
+
+.dehazing-details .dehazing-details-slider img {
+  width: 100%;
+}
+
+.dehazing-details .dehazing-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.dehazing-details .dehazing-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  opacity: 1;
+}
+
+.dehazing-details .dehazing-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+}
+
+.dehazing-details .dehazing-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.dehazing-details .dehazing-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.dehazing-details .dehazing-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.dehazing-details .dehazing-info ul li+li {
+  margin-top: 10px;
+}
+
+.dehazing-details .dehazing-description {
+  padding-top: 30px;
+}
+
+.dehazing-details .dehazing-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.dehazing-details .dehazing-description p {
+  padding: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+/* Degazing Details Section end */
+
+/* POPCat section STARTS */
+
+
+.popcat-details .popcat-details-slider img {
+  width: 100%;
+}
+
+.popcat-details .popcat-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.popcat-details .popcat-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  opacity: 1;
+}
+
+.popcat-details .popcat-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+}
+
+.popcat-details .popcat-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.popcat-details .popcat-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.popcat-details .popcat-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.popcat-details .popcat-info ul li+li {
+  margin-top: 10px;
+}
+
+.popcat-details .popcat-description {
+  padding-top: 30px;
+}
+
+.popcat-details .popcat-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.popcat-details .popcat-description p {
+  padding: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+
+/*  POPCat Section ends */
+
+/* ESCALADE section STARTS */
+
+.escalade-details .escalade-details-slider img {
+  width: 100%;
+}
+
+.escalade-details .escalade-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.escalade-details .escalade-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  opacity: 1;
+}
+
+.escalade-details .escalade-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+}
+
+.escalade-details .escalade-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.escalade-details .escalade-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.escalade-details .escalade-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.escalade-details .escalade-info ul li+li {
+  margin-top: 10px;
+}
+
+.escalade-details .escalade-description {
+  padding-top: 30px;
+}
+
+.escalade-details .escalade-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.escalade-details .escalade-description p {
+  padding: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
 /*--------------------------------------------------------------
 # Service Details Section
 --------------------------------------------------------------*/
