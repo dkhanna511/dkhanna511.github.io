@@ -66,6 +66,7 @@ body {
   font-family: var(--default-font);
 }
 
+
 a {
   color: var(--accent-color);
   text-decoration: none;
@@ -776,6 +777,12 @@ section,
   background: var(--background-color);
   border: 2px solid var(--accent-color);
 }
+
+.whats-new {
+  font-size: 1.05rem; /* Adjust the size as needed */
+}
+
+
 
 /*--------------------------------------------------------------
 # Portfolio Section
