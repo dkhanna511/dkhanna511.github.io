@@ -794,6 +794,58 @@ section,
 }
 
 
+/* Base styles (for larger screens) */
+.experience-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.logo {
+  max-width: 200px;
+}
+
+/* Responsive styles for smaller screens (phones) */
+@media (max-width: 768px) {
+  .experience-item {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .logos {
+      order: -1; /* Move logos above the bullet points */
+      width: 100%; /* Ensure logos take full width */
+      text-align: center;
+      margin-bottom: 20px; /* Add space below the logos */
+  }
+
+  .content {
+    order : 1; /*Ensure content cones after the logos
+      width: 100%; /* Full width for content */
+  }
+
+  .logo {
+      max-width: 150px; /* Reduce logo size on smaller screens */
+      margin-bottom: 10px;
+  }
+}
+
+
+
+
+
+/* This container is only for the graduate researcher position of UWaterloo because I have added 2 logos there */
+/* Flexbox container for the logos */
+
+
+/* GRaudate Student Reasearcher LOGO Section Over */
 
 /*--------------------------------------------------------------
 # Portfolio Section
