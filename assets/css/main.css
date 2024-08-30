@@ -1588,6 +1588,34 @@ section,
   padding: 0;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
+/*  This pasrt of code is to add multiple images in the portfolio section in an image container*/
+
+
+.portfolio-details-slider {
+  height: 500px; /* Adjust this height to your desired container height */
+  overflow: hidden; /* Ensures that content doesn't overflow the container */
+}
+
+.portfolio-details-slider .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-details-slider .swiper-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* This Part ends */
+
+
+
+
 
 /*--------------------------------------------------------------
 # Service Details Section
