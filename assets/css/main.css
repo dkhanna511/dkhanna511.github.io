@@ -1682,6 +1682,17 @@ section,
   color: var(--accent-color);
 }
 
+/* .video-container {
+  /* display: flex; */
+
+    /* gap: 200px; Space between videos */
+    /* justify-content: center; Center the videos */
+/* } */
+
+/* iframe {
+    max-width: 100%;
+    } */
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
