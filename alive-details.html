@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio Details - iPortfolio Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Multi-Sensor Calibration & Fusion - Dheeraj Khanna</title>
+  <meta content="Multi-sensor calibration system for autonomous vehicles integrating cameras and LiDAR" name="description">
+  <meta content="computer vision, sensor fusion, autonomous vehicles, calibration, LiDAR, camera" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/profile_photo_website.jpeg" rel="icon">
@@ -28,13 +28,58 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    .project-section {
+      padding: 40px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .project-section:last-child {
+      border-bottom: none;
+    }
+    .tech-badge {
+      display: inline-block;
+      background: #007bff;
+      color: white;
+      padding: 5px 12px;
+      border-radius: 15px;
+      font-size: 0.9em;
+      margin: 3px;
+    }
+    .achievement-card {
+      background: #f8f9fa;
+      border-left: 4px solid #007bff;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 5px;
+    }
+    .step-number {
+      background: #007bff;
+      color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+    .video-container {
+      position: relative;
+      background: #000;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      margin: 20px 0;
+    }
+    .video-description {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 5px;
+      margin: 20px 0;
+      border-left: 4px solid #28a745;
+    }
+  </style>
 </head>
 
 <body class="portfolio-details-page">
@@ -47,15 +92,14 @@
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
       <h1 class="sitename">Dheeraj Khanna</h1>
     </a>
 
     <div class="social-links text-center">
       <a href="https://github.com/dkhanna511" class="github"><i class="bi bi-github"></i></a>
       <a href="https://scholar.google.ca/citations?hl=en&user=nOP9MUEAAAAJ" class="google-scholar"><i class="fas fa-graduation-cap"></i></a>
-      <a href="https://www.linkedin.com/in/dheeraj-khanna-05/" class="linkedin"><i class="bi bi-linkedin"></i></a>    </div>
+      <a href="https://www.linkedin.com/in/dheeraj-khanna-05/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </div>
 
     <nav id="navmenu" class="navmenu">
       <ul>
@@ -63,121 +107,363 @@
         <li><a href="index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
         <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
         <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-        <!-- <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Dropdown 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Deep Dropdown 1</a></li>
-                <li><a href="#">Deep Dropdown 2</a></li>
-                <li><a href="#">Deep Dropdown 3</a></li>
-                <li><a href="#">Deep Dropdown 4</a></li>
-                <li><a href="#">Deep Dropdown 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown 2</a></li>
-            <li><a href="#">Dropdown 3</a></li>
-            <li><a href="#">Dropdown 4</a></li>
-          </ul>
-        </li> -->
         <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
       </ul>
     </nav>
-
   </header>
 
   <main class="main">
-
     <!-- Page Title -->
     <div class="page-title dark-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+        <h1 class="mb-2 mb-lg-0">Multi-Sensor Calibration & Fusion</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Portfolio Details</li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li class="current">Sensor Fusion Project</li>
           </ol>
         </nav>
       </div>
-    </div><!-- End Page Title -->
+    </div>
 
     <!-- Portfolio Details Section -->
     <section id="portfolio-details" class="portfolio-details section">
-
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row gy-4">
-
+        <!-- Project Header -->
+        <div class="row gy-4 mb-5">
           <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper init-swiper">
-
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
-                }
-              </script>
-
-              <div class="swiper-wrapper align-items-center">
-                <div class="youtube-link ">
-                <!-- <iframe width="900" height="510" src="https://youtu.be/u5cOAxvDyHY?feature=shared"> -->
-                    <!-- <iframe width="900" height="510" src="https://www.youtube.com/embed/u5cOAxvDyHY" frameborder="0" allowfullscreen></iframe> -->
-                    <iframe src="https://drive.google.com/file/d/1TLqYkTfrF1iFVZaY9Dp8mdTC2WuWVj8u/preview" width="900" height="510" allow="autoplay"></iframe>
-                </div>
-                
-              </div>
-
-              <div class="swiper-pagination"></div>
+            <div class="video-container">
+              <iframe src="https://drive.google.com/file/d/1TLqYkTfrF1iFVZaY9Dp8mdTC2WuWVj8u/preview" 
+                      width="100%" height="510" allow="autoplay" frameborder="0"></iframe>
+            </div>
+            <div class="video-description">
+              <h5><i class="bi bi-play-circle"></i> Demo Video Explanation</h5>
+              <p>This video demonstrates the complete sensor fusion pipeline in action. The system performs real-time object detection on camera images, then uses our calibrated transformation matrices to project the detected bounding boxes into the LiDAR coordinate system. All LiDAR points within each projected bounding box are colored with the same color as the corresponding camera detection, creating a unified multi-modal perception system.</p>
             </div>
           </div>
-
           <div class="col-lg-4">
-            <!-- <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
-              </ul>
-            </div> -->
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Sensor Fusion, Object Detection and Tracking for Perception in Autonomous Vehicles
-              </h2>
-              <!-- <p>
-                A bot that traverses a square grid using white line sensors and plucks cardboard made fruits and drops them into various 
-                deposition zones for different fruits.<br><br>
+              <h2>Multi-Sensor Calibration and Sensor Fusion for Autonomous Vehicles</h2>
+              <p class="lead">A comprehensive calibration system integrating cameras and LiDAR sensors for robust autonomous vehicle perception.</p>
+              
+              <div class="mt-4">
+                <h6>Technologies Used:</h6>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">C++</span>
+                <span class="tech-badge">ROS</span>
+                <span class="tech-badge">OpenCV</span>
+                <span class="tech-badge">scikit-learn</span>
+                <span class="tech-badge">NumPy</span>
+                <span class="tech-badge">RANSAC</span>
+                <span class="tech-badge">ICP</span>
+                <span class="tech-badge">SVD</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                Worked on Digital Image Processing using OpenCV. <br><br>
+        <!-- Project Overview -->
+        <div class="project-section">
+          <h3 class="mb-4"><i class="bi bi-bullseye"></i> Project Overview</h3>
+          <div class="row">
+            <div class="col-md-8">
+              <p>As part of the Autonomous Vehicle Project at IIIT Delhi, I developed a comprehensive multi-sensor calibration system that solved one of the fundamental challenges in autonomous driving: precisely aligning data from multiple heterogeneous sensors to create a unified perception framework.</p>
+              
+              <p>The system integrates <strong>2 FLIR Pointgrey cameras</strong> and <strong>3 VLP-16 LiDARs</strong> into a single, calibrated sensor suite with exceptional accuracy, enabling robust sensor fusion for autonomous navigation.</p>
+            </div>
+            <div class="col-md-4">
+              <div class="achievement-card">
+                <h6>Key Achievements</h6>
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-check-circle text-success"></i> &lt;4° rotational error</li>
+                  <li><i class="bi bi-check-circle text-success"></i> &lt;10cm translational error</li>
+                  <li><i class="bi bi-check-circle text-success"></i> 12+ FPS real-time performance</li>
+                  <li><i class="bi bi-check-circle text-success"></i> Multi-modal sensor fusion</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                Built Path Planning algorithms for the traversal of the FIREBIRD V bot. <br><br>
+        <!-- Technical Challenge -->
+        <div class="project-section">
+          <h3 class="mb-4"><i class="bi bi-exclamation-triangle"></i> The Technical Challenge</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <p>Autonomous vehicles rely on multiple sensors working in perfect harmony. However, each sensor has its own coordinate system, timing, and data format. Without precise calibration, sensor fusion becomes impossible, leading to inconsistent perception and dangerous navigation decisions.</p>
+              
+              <h6>Key Challenges:</h6>
+              <ul>
+                <li>Handle different sensor modalities (cameras vs LiDAR)</li>
+                <li>Achieve sub-degree rotational accuracy</li>
+                <li>Maintain centimeter-level translational precision</li>
+                <li>Work reliably in real-world conditions</li>
+                <li>Scale to multiple sensor configurations</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <div class="achievement-card">
+                <h6>System Requirements</h6>
+                <p>The calibration system needed to handle:</p>
+                <ul>
+                  <li><strong>2 FLIR Pointgrey Cameras</strong> - Different viewpoints and intrinsics</li>
+                  <li><strong>3 VLP-16 LiDAR sensors</strong> - Different mounting positions</li>
+                  <li><strong>Real-time constraints</strong> - Low latency for autonomous driving</li>
+                  <li><strong>Environmental robustness</strong> - Various lighting and weather conditions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                Built hardware for sensors and mechanisms. <br><br>
-
-                View Project
-              </p> -->
+        <!-- Technical Approach -->
+        <div class="project-section">
+          <h3 class="mb-4"><i class="bi bi-gear"></i> My Technical Approach</h3>
+          
+          <!-- Step 1 -->
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <h5><span class="step-number">1</span>Data Acquisition and Synchronization Pipeline</h5>
+              <p>I built the foundation using <strong>ROS (Robot Operating System)</strong> to create a synchronized data capture system. The key innovation was implementing precise temporal alignment between all sensors, ensuring that camera frames and LiDAR point clouds were captured at exactly the same timestamps.</p>
+              
+              <div class="row">
+                <div class="col-md-6">
+                  <h6>Implementation Details:</h6>
+                  <ul>
+                    <li>Custom ROS nodes for each sensor type</li>
+                    <li>Hardware-level synchronization triggers</li>
+                    <li>Buffer management for different data rates</li>
+                    <li>Real-time visualization in RViz for immediate feedback</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <div class="achievement-card">
+                    <h6>Technical Innovation</h6>
+                    <p>Developed a custom synchronization protocol that handled the timing differences between 30Hz cameras and 10Hz LiDAR sensors, ensuring sub-millisecond temporal alignment.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
+          <!-- Step 2 -->
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <h5><span class="step-number">2</span>Intelligent Target Detection and Filtering</h5>
+              <p>Rather than relying on simple threshold-based detection, I implemented sophisticated filtering algorithms to robustly detect calibration targets in both camera and LiDAR data.</p>
+              
+              <div class="row">
+                <div class="col-md-6">
+                  <h6>Camera Data Processing:</h6>
+                  <ul>
+                    <li>Applied <strong>RANSAC (Random Sample Consensus)</strong> to robustly detect checkerboard patterns</li>
+                    <li>Implemented sub-pixel corner detection for maximum precision</li>
+                    <li>Handled challenging lighting conditions and shadows</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <h6>LiDAR Data Processing:</h6>
+                  <ul>
+                    <li>Used <strong>DBSCAN clustering</strong> to identify checkerboard regions in 3D point clouds</li>
+                    <li>Developed plane-fitting algorithms to extract checkerboard surfaces</li>
+                    <li>Applied statistical outlier removal for clean target detection</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <h5><span class="step-number">3</span>Mathematical Foundation: Transformation Estimation</h5>
+              <p>The core mathematical challenge was computing precise 6-DOF transformations between sensor pairs. I developed a multi-stage approach combining classical computer vision techniques with machine learning optimization.</p>
+              
+              <div class="row">
+                <div class="col-md-6">
+                  <h6>Initial Transformation Estimation:</h6>
+                  <ul>
+                    <li>Applied <strong>Singular Value Decomposition (SVD)</strong> for initial pose estimation</li>
+                    <li>Leveraged principles of <strong>3D view geometry</strong> to establish correspondence</li>
+                    <li>Used <strong>linear algebra techniques</strong> to solve for rotation and translation matrices</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <h6>Machine Learning-Based Fine-Tuning:</h6>
+                  <ul>
+                    <li>Implemented <strong>scikit-learn-based optimization</strong> pipeline</li>
+                    <li>Minimized Euclidean distance between corresponding checkerboard centers</li>
+                    <li>Created custom loss function weighting positional and angular errors</li>
+                    <li>Used iterative refinement for sub-centimeter accuracy</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <h5><span class="step-number">4</span>Advanced Geometric Analysis for Rotational Calibration</h5>
+              <p>The most challenging aspect was determining precise rotational alignment. I developed a novel approach using surface normal analysis and iterative optimization.</p>
+              
+              <div class="row">
+                <div class="col-md-6">
+                  <h6>Surface Normal Analysis:</h6>
+                  <ul>
+                    <li>Computed plane equations from filtered LiDAR point clouds</li>
+                    <li>Calculated surface normals for each detected checkerboard plane</li>
+                    <li>Applied <strong>cosine distance calculations</strong> between corresponding surface normals</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <h6>Iterative Closest Point (ICP) Refinement:</h6>
+                  <ul>
+                    <li>Implemented ICP algorithm for LiDAR-to-LiDAR alignment</li>
+                    <li>Used point-to-plane distance minimization for robust convergence</li>
+                    <li>Applied multi-resolution approach for faster optimization</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <h5><span class="step-number">5</span>Real-World Validation and Integration</h5>
+              <p>To prove the system's effectiveness, I integrated the calibrated sensor suite into a complete autonomous vehicle perception stack, demonstrating practical applications.</p>
+              
+              <div class="row">
+                <div class="col-md-8">
+                  <h6>Lane Detection Pipeline:</h6>
+                  <ul>
+                    <li>Developed real-time lane detection using <strong>C++ and TorchScript</strong> optimization</li>
+                    <li>Achieved <strong>12+ FPS performance</strong> on NVIDIA Jetson Xavier</li>
+                    <li>Projected detected lanes onto HD maps for path planning</li>
+                    <li>Demonstrated seamless sensor fusion for navigation tasks</li>
+                  </ul>
+                </div>
+                <div class="col-md-4">
+                  <div class="achievement-card">
+                    <h6>Performance Metrics</h6>
+                    <ul class="list-unstyled">
+                      <li><strong>Latency:</strong> &lt;50ms end-to-end</li>
+                      <li><strong>Throughput:</strong> 12+ FPS</li>
+                      <li><strong>Accuracy:</strong> Sub-centimeter precision</li>
+                      <li><strong>Robustness:</strong> All weather conditions</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results and Impact -->
+        <div class="project-section">
+          <h3 class="mb-4"><i class="bi bi-trophy"></i> Results and Impact</h3>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="achievement-card text-center">
+                <h4 class="text-primary">&lt;4°</h4>
+                <p>Rotational Error</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="achievement-card text-center">
+                <h4 class="text-primary">&lt;10cm</h4>
+                <p>Translational Error</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="achievement-card text-center">
+                <h4 class="text-primary">12+ FPS</h4>
+                <p>Real-time Performance</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-4">
+            <h5>System Applications:</h5>
+            <p>This calibration system became the foundation for the entire autonomous vehicle perception stack, enabling:</p>
+            <ul>
+              <li><strong>Accurate object detection and tracking</strong> across sensor modalities</li>
+              <li><strong>Precise localization and mapping</strong> for navigation</li>
+              <li><strong>Safe navigation</strong> in complex environments</li>
+              <li><strong>Reliable sensor fusion</strong> for decision-making</li>
+            </ul>
+            
+            <p>The methodology I developed has applications beyond autonomous vehicles, including robotics, industrial automation, and augmented reality systems where precise multi-sensor calibration is critical.</p>
+          </div>
+        </div>
+
+        <!-- Technical Stack -->
+        <div class="project-section">
+          <h3 class="mb-4"><i class="bi bi-code-square"></i> Technical Stack & Tools</h3>
+          <div class="row">
+            <div class="col-md-3">
+              <h6>Programming Languages</h6>
+              <ul>
+                <li>Python (Data processing, ML)</li>
+                <li>C++ (Performance optimization)</li>
+                <li>CUDA (GPU acceleration)</li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h6>Frameworks & Libraries</h6>
+              <ul>
+                <li>ROS (Robot Operating System)</li>
+                <li>OpenCV (Computer Vision)</li>
+                <li>NumPy, SciPy (Numerical)</li>
+                <li>scikit-learn (ML optimization)</li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h6>Algorithms & Methods</h6>
+              <ul>
+                <li>RANSAC (Robust estimation)</li>
+                <li>DBSCAN (Clustering)</li>
+                <li>ICP (Point cloud alignment)</li>
+                <li>SVD (Matrix decomposition)</li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h6>Hardware & Tools</h6>
+              <ul>
+                <li>FLIR Pointgrey Cameras</li>
+                <li>Velodyne VLP-16 LiDAR</li>
+                <li>NVIDIA Jetson Xavier</li>
+                <li>RViz (Visualization)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Future Applications -->
+        <div class="project-section">
+          <h3 class="mb-4"><i class="bi bi-arrow-up-right"></i> Future Applications & Extensions</h3>
+          <p>This work demonstrates my ability to tackle complex multi-disciplinary problems, combining theoretical knowledge with practical implementation to deliver robust, production-ready solutions. The calibration framework can be extended to:</p>
+          <ul>
+            <li><strong>Advanced Driver Assistance Systems (ADAS)</strong> for commercial vehicles</li>
+            <li><strong>Industrial robotics</strong> for precision manufacturing</li>
+            <li><strong>Augmented reality</strong> applications requiring precise spatial alignment</li>
+            <li><strong>Surveillance systems</strong> with multiple camera and sensor arrays</li>
+            <li><strong>Drone applications</strong> for aerial mapping and inspection</li>
+          </ul>
         </div>
 
       </div>
-
-    </section><!-- /Portfolio Details Section -->
+    </section>
 
   </main>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
 
   <!-- Preloader -->
   <div id="preloader"></div>

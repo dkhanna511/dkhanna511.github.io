@@ -140,6 +140,33 @@ h6 {
   }
 }
 
+.hero-bg {
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: gradientMove 8s infinite alternate;
+  top: 0; left: 0;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+.profile-img.animated-glow {
+  box-shadow: 0 0 20px 5px #00ffd0, 0 0 40px 10px #0055ff33;
+  transition: box-shadow 0.3s;
+}
+.profile-img.animated-glow:hover {
+  box-shadow: 0 0 40px 10px #00ffd0, 0 0 80px 20px #0055ff66;
+}
+
+.section-divider svg {
+  display: block;
+  width: 100%;
+  height: 40px;
+}
+
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
