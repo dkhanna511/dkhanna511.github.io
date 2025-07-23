@@ -19,7 +19,10 @@
     headerToggleBtn.classList.toggle('bi-list');
     headerToggleBtn.classList.toggle('bi-x');
   }
-  headerToggleBtn.addEventListener('click', headerToggle);
+  
+  if (headerToggleBtn) {
+    headerToggleBtn.addEventListener('click', headerToggle);
+  }
 
   /**
    * Hide mobile nav on same-page/hash links
@@ -30,7 +33,6 @@
         headerToggle();
       }
     });
-
   });
 
   /**
@@ -65,13 +67,16 @@
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
   }
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  
+  if (scrollTop) {
+    scrollTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
-  });
+  }
 
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
@@ -99,8 +104,8 @@
     new Typed('.typed', {
       strings: typed_strings,
       loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
+      typeSpeed: 80,
+      backSpeed: 40,
       backDelay: 2000
     });
   }
@@ -164,7 +169,6 @@
         }
       }, false);
     });
-
   });
 
   /**
@@ -221,9 +225,142 @@
       } else {
         navmenulink.classList.remove('active');
       }
-    })
+    });
   }
+  
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
+  /**
+   * Enhanced hero background animation
+   */
+  function initHeroAnimations() {
+    const heroSection = document.querySelector('.hero');
+    const profileImg = document.querySelector('.profile-img.animated-glow img');
+    
+    if (heroSection && profileImg) {
+      // Add intersection observer for hero animations
+      const heroObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      heroObserver.observe(heroSection);
+    }
+  }
+
+  /**
+   * Enhanced smooth scrolling for internal links
+   */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        const headerOffset = 80;
+        const elementPosition = target.offsetTop;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  /**
+   * Add loading state to external links
+   */
+  document.querySelectorAll('a[target="_blank"]').forEach(link => {
+    link.addEventListener('click', function() {
+      this.style.opacity = '0.7';
+      setTimeout(() => {
+        this.style.opacity = '1';
+      }, 300);
+    });
+  });
+
+  /**
+   * Enhanced portfolio item interactions
+   */
+  function initPortfolioEnhancements() {
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+    portfolioItems.forEach(item => {
+      item.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px)';
+      });
+      
+      item.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+      });
+    });
+  }
+
+  /**
+   * Initialize custom animations
+   */
+  function initCustomAnimations() {
+    // Stagger animation for skill bars
+    const skillBars = document.querySelectorAll('.progress-bar');
+    skillBars.forEach((bar, index) => {
+      bar.style.animationDelay = `${index * 0.1}s`;
+    });
+
+    // Fade in animation for cards
+    const cards = document.querySelectorAll('.modern-card, .resume-item, .whats-new-item');
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }, index * 100);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    cards.forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'all 0.6s ease';
+      cardObserver.observe(card);
+    });
+  }
+
+  /**
+   * Initialize all enhancements when DOM is loaded
+   */
+  document.addEventListener('DOMContentLoaded', function() {
+    initHeroAnimations();
+    initPortfolioEnhancements();
+    initCustomAnimations();
+  });
+
+  /**
+   * Performance optimization - Lazy load images
+   */
+  function initLazyLoading() {
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.classList.remove('lazy');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+
+    images.forEach(img => imageObserver.observe(img));
+  }
+
+  // Initialize lazy loading
+  window.addEventListener('load', initLazyLoading);
 
 })();
