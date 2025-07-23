@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio Details - iPortfolio Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>POPCat: Propagation of Particles - Portfolio</title>
+  <meta content="POPCat: Advanced computer vision pipeline for weakly supervised object detection and annotation" name="description">
+  <meta content="computer vision, object detection, annotation, YOLO, SAM, point tracking" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/profile_photo_website.jpeg" rel="icon">
@@ -25,17 +25,176 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    .pipeline-step {
+      background: var(--surface-color);
+      border: 2px solid var(--accent-color);
+      border-radius: 15px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      color: var(--default-color);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .pipeline-step:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+      border-color: color-mix(in srgb, var(--accent-color), black 20%);
+    }
+    
+    .pipeline-step .step-number {
+      background: var(--accent-color);
+      color: var(--contrast-color);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .tech-badge {
+      display: inline-block;
+      background: var(--accent-color);
+      color: var(--contrast-color);
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      margin: 0.25rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: all 0.2s ease;
+    }
+    
+    .tech-badge:hover {
+      background: color-mix(in srgb, var(--accent-color), black 20%);
+      transform: translateY(-2px);
+    }
+    
+    .performance-metric {
+      background: var(--accent-color);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      color: var(--contrast-color);
+      margin-bottom: 1rem;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .performance-metric:hover {
+      transform: translateY(-3px);
+    }
+    
+    .performance-metric .metric-value {
+      font-size: 2.5rem;
+      font-weight: bold;
+      display: block;
+    }
+    
+    .performance-metric .metric-label {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+    
+    .demo-video {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      border: 2px solid color-mix(in srgb, var(--accent-color), transparent 70%);
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .feature-card {
+      background: var(--surface-color);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-left: 4px solid var(--accent-color);
+      color: var(--default-color);
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+    
+    .feature-icon {
+      color: var(--accent-color);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .workflow-diagram {
+      background: var(--surface-color);
+      border: 2px solid var(--accent-color);
+      border-radius: 15px;
+      padding: 2rem;
+      color: var(--default-color);
+      margin: 2rem 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .workflow-diagram h2 {
+      color: var(--heading-color);
+    }
+    
+    .workflow-diagram h4 {
+      color: var(--accent-color);
+    }
+    
+    .arrow-connector {
+      text-align: center;
+      font-size: 2rem;
+      color: var(--accent-color);
+      margin: 1rem 0;
+    }
+    
+    .dataset-info {
+      background: var(--surface-color);
+      border: 2px solid var(--accent-color);
+      border-radius: 12px;
+      padding: 1.5rem;
+      color: var(--default-color);
+      margin: 1rem 0;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+    
+    .dataset-info h3 {
+      color: var(--heading-color);
+    }
+    
+    .dataset-info h5 {
+      color: var(--accent-color);
+    }
+    
+    .project-info {
+      background: var(--surface-color) !important;
+      border: 2px solid color-mix(in srgb, var(--accent-color), transparent 70%);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+    
+    .alert-light {
+      background: color-mix(in srgb, var(--accent-color), transparent 90%) !important;
+      border: 1px solid color-mix(in srgb, var(--accent-color), transparent 70%) !important;
+      color: var(--default-color) !important;
+    }
+  </style>
 </head>
 
 <body class="portfolio-details-page">
@@ -48,8 +207,6 @@
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
       <h1 class="sitename">Dheeraj Khanna</h1>
     </a>
 
@@ -65,115 +222,345 @@
         <li><a href="index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
         <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
         <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-        <!-- <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Dropdown 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Deep Dropdown 1</a></li>
-                <li><a href="#">Deep Dropdown 2</a></li>
-                <li><a href="#">Deep Dropdown 3</a></li>
-                <li><a href="#">Deep Dropdown 4</a></li>
-                <li><a href="#">Deep Dropdown 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown 2</a></li>
-            <li><a href="#">Dropdown 3</a></li>
-            <li><a href="#">Dropdown 4</a></li>
-          </ul>
-        </li> -->
         <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
       </ul>
     </nav>
-
   </header>
 
   <main class="main">
-
     <!-- Page Title -->
     <div class="page-title dark-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+        <h1 class="mb-2 mb-lg-0">POPCat: Propagation of Particles</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Portfolio Details</li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li class="current">POPCat</li>
           </ol>
         </nav>
       </div>
-    </div><!-- End Page Title -->
+    </div>
 
     <!-- Portfolio Details Section -->
     <section id="portfolio-details" class="portfolio-details section">
-
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row gy-4">
-
+        <!-- Project Overview -->
+        <div class="row mb-5">
           <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper init-swiper">
-
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
-                }
-              </script>
-
-              <div class="swiper-wrapper align-items-center">
-
-                <!-- <div class="swiper-slide">
-                  <img src="assets/img/portfolio/POPCat-work.jpg" alt="">
-                </div> -->
-                <div class="youtube-link ">
-                  <iframe src="https://drive.google.com/file/d/1u4fNkC98JDQ4HLs7Jb12QKXLn_Q7wHRf/preview" width="900" height="510" allow="autoplay"></iframe>
-                </div>
-
-
-              </div>
-              <div class="swiper-pagination"></div>
+            <div class="demo-video">
+              <iframe src="https://drive.google.com/file/d/1u4fNkC98JDQ4HLs7Jb12QKXLn_Q7wHRf/preview" 
+                      width="100%" height="450" allow="autoplay" style="border: none;"></iframe>
             </div>
           </div>
-
+          
           <div class="col-lg-4">
-            <!-- <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+            <div class="project-info bg-light p-4 rounded-3 mb-4">
+              <h3 class="h4 mb-3"><i class="bi bi-info-circle text-primary"></i> Project Information</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2"><strong>Category:</strong> Computer Vision Pipeline</li>
+                <li class="mb-2"><strong>Type:</strong> Semi-Supervised Learning</li>
+                <li class="mb-2"><strong>Application:</strong> Multi-Object Tracking & Detection</li>
+                <li class="mb-2"><strong>Publication:</strong> <a href="http://arxiv.org/abs/2406.17183" target="_blank">arXiv:2406.17183</a></li>
+                <li class="mb-2"><strong>GitHub:</strong> <a href="https://github.com/dkhanna511" target="_blank">View Code</a></li>
               </ul>
-            </div> -->
-            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>POPCat: Propagation of Particles for Complex Annotation Tasks
-              </h2>
-              <p>
-                In this project, I created a system for annotation videos for the purpose of multiple object tracking. I used a combination of off-the shelf algorithms
-                like Point Tracking (PIPs), Segmentation (Segment Anything by Meta) and Object Detection for it.
-              </p>
+            </div>
+
+            <!-- Performance Metrics -->
+            <div class="performance-metric">
+              <span class="metric-value">43.1%</span>
+              <span class="metric-label">mAP50 Improvement<br>on AnimalTrack</span>
+            </div>
+            
+            <div class="performance-metric">
+              <span class="metric-value">24.5%</span>
+              <span class="metric-label">Recall Improvement<br>on GMOT-40</span>
             </div>
           </div>
+        </div>
 
+        <!-- Project Description -->
+        <div class="row mb-5">
+          <div class="col-12">
+            <div class="workflow-diagram">
+              <h2 class="h3 mb-4"><i class="fas fa-rocket"></i> Project Overview</h2>
+              <p class="lead mb-4">
+                POPCat is an innovative computer vision pipeline that revolutionizes video annotation for multi-object tracking, 
+                crowd-counting, and industrial video tasks. By combining state-of-the-art particle tracking, segmentation, and 
+                object detection algorithms, it creates a semi-supervised system that significantly reduces annotation time while 
+                maintaining human-level accuracy.
+              </p>
+              
+              <div class="row">
+                <div class="col-md-6">
+                  <h4><i class="fas fa-bullseye text-warning"></i> Key Innovation</h4>
+                  <p>Exploits multi-target and temporal features of video data through particle tracking to expand 
+                     human-provided target points across multiple frames, generating large volumes of semi-supervised annotations.</p>
+                </div>
+                <div class="col-md-6">
+                  <h4><i class="fas fa-chart-line text-success"></i> Impact</h4>
+                  <p>Achieved significant improvements on challenging benchmarks: 24.5% recall improvement on GMOT-40, 
+                     43.1% mAP50 improvement on AnimalTrack, and 9.4% mAP50 improvement on Visdrone-2019.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Pipeline -->
+        <div class="row mb-5">
+          <div class="col-12">
+            <h2 class="h3 mb-4 text-center">🔬 Technical Pipeline</h2>
+            
+            <div class="pipeline-step" data-aos="fade-up" data-aos-delay="100">
+              <div class="step-number">1</div>
+              <h4><i class="fas fa-mouse-pointer"></i> Strategic Frame Selection & Manual Annotation</h4>
+              <p>Custom Tkinter GUI enables users to select key frames from video sequences and manually annotate target points 
+                 on multiple objects. The number of frames and points can be adjusted based on video length and annotation requirements, 
+                 providing flexibility for different use cases.</p>
+              <div class="mt-3">
+                <span class="tech-badge">Tkinter GUI</span>
+                <span class="tech-badge">OpenCV</span>
+                <span class="tech-badge">Python</span>
+              </div>
+            </div>
+
+            <div class="arrow-connector">⬇</div>
+
+            <div class="pipeline-step" data-aos="fade-up" data-aos-delay="200">
+              <div class="step-number">2</div>
+              <h4><i class="fas fa-crosshairs"></i> Particle Tracking Propagation</h4>
+              <p>Leverages advanced particle tracking algorithms (PIPs & TAPIR) to propagate manually annotated points across 
+                 subsequent video frames. The temporal propagation exploits multi-target features to maintain tracking accuracy 
+                 across challenging scenarios including occlusions and camera movements.</p>
+              <div class="mt-3">
+                <span class="tech-badge">PIPs Algorithm</span>
+                <span class="tech-badge">TAPIR (JAX)</span>
+                <span class="tech-badge">Particle Tracking</span>
+              </div>
+            </div>
+
+            <div class="arrow-connector">⬇</div>
+
+            <div class="pipeline-step" data-aos="fade-up" data-aos-delay="300">
+              <div class="step-number">3</div>
+              <h4><i class="fas fa-puzzle-piece"></i> Segment Anything Model Integration</h4>
+              <p>Meta's Segment Anything Model (SAM) uses the propagated particle points as prompts to generate precise object 
+                 segmentations across the target frames. This approach enables accurate object boundary detection for 
+                 densely populated video sequences with minimal manual intervention.</p>
+              <div class="mt-3">
+                <span class="tech-badge">Segment Anything (SAM)</span>
+                <span class="tech-badge">Meta AI</span>
+                <span class="tech-badge">Point Prompting</span>
+              </div>
+            </div>
+
+            <div class="arrow-connector">⬇</div>
+
+            <div class="pipeline-step" data-aos="fade-up" data-aos-delay="400">
+              <div class="step-number">4</div>
+              <h4><i class="fas fa-search"></i> Automated Bounding Box Generation</h4>
+              <p>Converts segmentation masks into precise bounding boxes, creating a comprehensive training dataset for object 
+                 detection. This automated process ensures consistent annotation quality across all generated samples.</p>
+              <div class="mt-3">
+                <span class="tech-badge">Computer Vision</span>
+                <span class="tech-badge">Geometric Processing</span>
+                <span class="tech-badge">Dataset Generation</span>
+              </div>
+            </div>
+
+            <div class="arrow-connector">⬇</div>
+
+            <div class="pipeline-step" data-aos="fade-up" data-aos-delay="500">
+              <div class="step-number">5</div>
+              <h4><i class="fas fa-brain"></i> Weakly Supervised Training</h4>
+              <p>Trains a YOLOv8 object detector on the automatically generated dataset of 1500 samples. This weakly supervised 
+                 approach achieves high performance without requiring extensive manual annotation effort.</p>
+              <div class="mt-3">
+                <span class="tech-badge">YOLOv8</span>
+                <span class="tech-badge">PyTorch</span>
+                <span class="tech-badge">Weakly Supervised Learning</span>
+              </div>
+            </div>
+
+            <div class="arrow-connector">⬇</div>
+
+            <div class="pipeline-step" data-aos="fade-up" data-aos-delay="600">
+              <div class="step-number">6</div>
+              <h4><i class="fas fa-video"></i> Full Video Inference</h4>
+              <p>Deploys the trained model to annotate remaining video frames automatically, achieving 10 FPS processing speed. 
+                 The system scales efficiently to handle complete video sequences with minimal computational overhead.</p>
+              <div class="mt-3">
+                <span class="tech-badge">Real-time Inference</span>
+                <span class="tech-badge">Docker Deployment</span>
+                <span class="tech-badge">Production Ready</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Features -->
+        <div class="row mb-5">
+          <div class="col-12">
+            <h2 class="h3 mb-4 text-center">✨ Key Features & Capabilities</h2>
+            <div class="features-grid">
+              
+              <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-icon"><i class="fas fa-tachometer-alt"></i></div>
+                <h4>High-Speed Processing</h4>
+                <p>Achieves 10 FPS annotation speed, representing a 10x improvement over traditional methods. Optimized algorithms 
+                   and efficient implementation ensure real-time performance.</p>
+              </div>
+
+              <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature-icon"><i class="fas fa-magic"></i></div>
+                <h4>Minimal Manual Input</h4>
+                <p>Requires only 30 manual point annotations to generate 1500+ training samples. Intelligent propagation 
+                   algorithms maximize the value of minimal human input.</p>
+              </div>
+
+              <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature-icon"><i class="fas fa-eye"></i></div>
+                <h4>State-of-the-Art Algorithms</h4>
+                <p>Integrates latest computer vision models including PIPs, TAPIR, SAM, and YOLOv8. Benchmarked against 
+                   industry standards for optimal performance.</p>
+              </div>
+
+              <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="feature-icon"><i class="fas fa-docker"></i></div>
+                <h4>Production Ready</h4>
+                <p>Fully containerized with Docker for seamless deployment. Used in production at ATS Automations with 
+                   proven reliability and scalability.</p>
+              </div>
+
+              <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
+                <h4>Comprehensive Benchmarking</h4>
+                <p>Thoroughly tested on GMOT-40 and Animal Track datasets. Performance metrics demonstrate significant 
+                   improvements over existing annotation pipelines.</p>
+              </div>
+
+              <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="feature-icon"><i class="fas fa-cogs"></i></div>
+                <h4>Multi-Algorithm Integration</h4>
+                <p>Seamlessly combines PyTorch, JAX, OpenCV, and specialized computer vision libraries. Demonstrates 
+                   advanced software engineering and system integration skills.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Stack & Datasets -->
+        <div class="row mb-5">
+          <div class="col-md-6">
+            <div class="bg-light p-4 rounded-3 h-100">
+              <h3 class="h4 mb-3"><i class="fas fa-layer-group text-primary"></i> Technology Stack</h3>
+              <div class="mb-3">
+                <h5>Core Frameworks</h5>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">PyTorch</span>
+                <span class="tech-badge">JAX</span>
+                <span class="tech-badge">OpenCV</span>
+              </div>
+              <div class="mb-3">
+                <h5>Computer Vision Models</h5>
+                <span class="tech-badge">YOLOv8</span>
+                <span class="tech-badge">Segment Anything (SAM)</span>
+                <span class="tech-badge">PIPs</span>
+                <span class="tech-badge">TAPIR</span>
+              </div>
+              <div class="mb-3">
+                <h5>Development & Deployment</h5>
+                <span class="tech-badge">Docker</span>
+                <span class="tech-badge">Tkinter</span>
+                <span class="tech-badge">Git</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="dataset-info h-100">
+              <h3 class="h4 mb-3"><i class="fas fa-database"></i> Benchmark Datasets</h3>
+              <div class="mb-3">
+                <h5><i class="fas fa-users"></i> GMOT-40 Dataset</h5>
+                <p>Multi-object tracking benchmark featuring challenging scenarios with similar-looking targets, 
+                   occlusions, and complex interactions in crowded environments.</p>
+              </div>
+              <div class="mb-3">
+                <h5><i class="fas fa-paw"></i> AnimalTrack Dataset</h5>
+                <p>Specialized dataset for animal behavior analysis featuring diverse species in natural environments 
+                   with varying lighting conditions and camera movements.</p>
+              </div>
+              <div class="mb-3">
+                <h5><i class="fas fa-plane"></i> Visdrone-2019 Dataset</h5>
+                <p>Aerial video dataset captured by drone platforms, containing various objects with different scales, 
+                   orientations, and densities in diverse scenarios.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Benchmark Results -->
+        <div class="row mb-5">
+          <div class="col-12">
+            <div class="workflow-diagram">
+              <h2 class="h3 mb-4"><i class="fas fa-chart-bar"></i> Benchmark Performance</h2>
+              <div class="row">
+                <div class="col-md-8">
+                  <h4>Comprehensive Evaluation on Challenging Datasets</h4>
+                  <p class="mb-3">POPCat was rigorously evaluated on three challenging multi-object tracking and detection benchmarks: 
+                     GMOT-40, AnimalTrack, and Visdrone-2019. These datasets contain multiple similar-looking targets, camera movements, 
+                     and other challenging features commonly seen in real-world scenarios.</p>
+                  
+                  <h5><i class="fas fa-medal text-warning"></i> Key Performance Improvements</h5>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">✓ <strong>GMOT-40:</strong> 24.5% recall improvement, 9.6% mAP50 improvement, 4.8% mAP improvement</li>
+                    <li class="mb-2">✓ <strong>AnimalTrack:</strong> 43.1% mAP50 improvement, 27.8% mAP improvement</li>
+                    <li class="mb-2">✓ <strong>Visdrone-2019:</strong> 7.5% recall improvement, 9.4% mAP50 improvement, 7.5% mAP improvement</li>
+                    <li class="mb-2">✓ Maintains human-level annotation accuracy while generating large-scale training data</li>
+                  </ul>
+                </div>
+                <div class="col-md-4 text-center">
+                  <div class="performance-metric mb-3">
+                    <span class="metric-value">3</span>
+                    <span class="metric-label">Benchmark Datasets<br>Evaluated</span>
+                  </div>
+                  <div class="performance-metric">
+                    <span class="metric-value">✓</span>
+                    <span class="metric-label">Published Research<br>arXiv:2406.17183</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="row">
+          <div class="col-12 text-center">
+            <div style="background: var(--accent-color); color: var(--contrast-color);" class="p-4 rounded-3">
+              <h3>Interested in Learning More?</h3>
+              <p class="mb-3">POPCat represents the cutting edge of computer vision pipeline development. 
+                 I'm always excited to discuss technical details, potential applications, or collaboration opportunities.</p>
+              <a href="index.html#contact" class="btn btn-light btn-lg me-3">
+                <i class="bi bi-envelope"></i> Get In Touch
+              </a>
+              <a href="https://github.com/dkhanna511" target="_blank" class="btn btn-outline-light btn-lg">
+                <i class="bi bi-github"></i> View Code
+              </a>
+            </div>
+          </div>
         </div>
 
       </div>
-
-    </section><!-- /Portfolio Details Section -->
-
+    </section>
   </main>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -194,5 +581,4 @@
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>
